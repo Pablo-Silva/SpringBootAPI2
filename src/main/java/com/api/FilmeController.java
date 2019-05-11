@@ -26,7 +26,7 @@ public class FilmeController {
         return (List<Filme>) filmeRepository.findAll();
     }
 
-    @PostMapping("/filmes")
+    @PostMapping("/filmes/post")
     public void addUser(@RequestBody Filme filme) {
         filmeRepository.save(filme);
     }
