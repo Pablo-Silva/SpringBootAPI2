@@ -27,8 +27,8 @@ public class FilmeController {
     }
 
     @PostMapping("/filmes/post")
-    public void addUser(@RequestBody Filme filme) {
-        filmeRepository.save(filme);
+    public Filme addUser(@RequestBody Filme filme) {
+        return filmeRepository.save(filme);
     }
 
     @GetMapping("/filmes/{id}")
